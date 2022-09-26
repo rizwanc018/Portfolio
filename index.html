@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>My Portfolio</title>
 </head>
 
 <body>
-    <!-- <div class="browser"> -->
     <div class="hero">
         <div class="editor">
             <div class="tab-bar">
@@ -93,11 +93,15 @@
                         <div class="inner-html medium"></div>
                         <div class="tag small"></div>
                     </div>
-                    <div class="line head small tag"></div>
+                    <div class="line">
+                        <div class="head small tag "></div>
+                    </div>
+
                     <div class="gap"></div>
 
-
-                    <div class="line body small tag"></div>
+                    <div class="line">
+                        <div class="body small tag"></div>
+                    </div>
                     <div class="line">
                         <div class="margin-small header medium tag"></div>
                         <div class="text small"></div>
@@ -254,11 +258,8 @@
                     <div class="line">
                         <div class="margin-medium tag medium"></div>
                     </div>
-     
                     <div class="margin-small header line medium tag"></div>
                     <div class="line body small tag"></div>
-
-
                 </div>
 
                 <div class="aside-bar"></div>
@@ -302,6 +303,7 @@
             <div class="brwsr-vp">
                 <section class="star-container">
                     <span class="star"></span>
+
                     <span class="star"></span>
                     <span class="star"></span>
                     <span class="star"></span>
@@ -318,7 +320,7 @@
                     <div class="planet planet1"></div>
                     <div class="planet planet2"></div>
                 </div>
-                
+
                 <section class="shootingStar-container">
                     <span class="shooting-star"></span>
                     <span class="shooting-star"></span>
@@ -330,14 +332,128 @@
         </div>
 
     </div>
-<!-- ----------------------------------------------------------------- -->
-    <h1>Hi iam Rizwan</h1>
+    <!-- ----------------------------------------------------------------- -->
+    <div class="about content-container" id="about">
+        <!-- <h1 class="container-title">About me</h1> -->
+        <p>Hi, my name is <span class="name">Rizwan,</span></p>
+        <h2>I am a <span class="fd">Front-end Developer,</span></h2>
+        <p> who loves to do CSS, I can help you bring your Dream Designs to Real life.</p>
+        <div class="social-icons-container">
+            <a href="https://github.com/rizwanc018" target="_blank">
+                <svg class="icon social-icon">
+                    <use xlink:href="/icons.svg#icons8-github"></use>
+                </svg>
+            </a>
+            <a href="https://twitter.com/rizwanc_r" target="_blank">
+                <svg class="icon social-icon">
+                    <use xlink:href="/icons.svg#icons8-twitter"></use>
+                </svg>
+            </a>
+            <a href="mailto:crizwan440@gmail.com" target="_blank">
+                <svg class="icon social-icon">
+                    <use xlink:href="/icons.svg#icons8-gmail-logo"></use>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/rizwan-c" target="_blank">
+                <svg class="icon social-icon">
+                    <use xlink:href="/icons.svg#icons8-linkedin"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
 
+    <div class="skills-container content-container" id="skills">
+        <h1 class="skills-title container-title">Skills</h1>
+        <div class="skill-icons-container">
+            <div>
+                <svg class="icon skill-icon">
+                    <use xlink:href="/icons.svg#icons8-html-5"></use>
+                </svg>
+                <p>HTML</p>
+            </div>
+            <div> <svg class="icon skill-icon css-icon">
+                    <use xlink:href="/icons.svg#icons8-css3"></use>
+                </svg>
+                <p>CSS</p>
+            </div>
+            <div> <svg class="icon skill-icon">
+                    <use xlink:href="/icons.svg#icons8-javascript-logo"></use>
+                </svg>
+                <p>Javascript</p>
+
+            </div>
+            <div> <svg class="icon skill-icon">
+                    <use xlink:href="/icons.svg#icons8-react-native"></use>
+                </svg>
+                <p>React JS</p>
+            </div>
+            <div>
+                <svg class="icon skill-icon">
+                    <use xlink:href="/icons.svg#icons8-settings"></use>
+                  </svg>
+                  <p>API</p>
+            </div>
+            <div> <svg class="icon skill-icon">
+                    <use xlink:href="/icons.svg#terminal_icon"></use>
+                </svg>
+                <p>Bash</p>
+            </div>
+ 
+        </div>
+    </div>
+
+    <div class="projects content-container">
+        <h1 class="container-title">Projects</h1>
+        <!-- </div> -->
+        <div class="cards-container">
+            <div class="card">
+                <img src="/images/coffee-shop.png" alt="">
+                <h2>Coffe House</h2>
+                <div><p>HTML</p><p>CSS</p></div>
+                <p>A simple beautiful coffee shop website. My first Web development project, Created after learning <span>HTML</span> and <span>CSS</span>. Later added some JS animation to it. Design is copied from internet</p>
+                <a href="https://caffee-shop.netlify.app">Visit</a>
+            </div>
+            <div class="card">
+                <img src="/images/prade.png" alt="">
+                <h2>Prade</h2>
+                <div><p>HTML</p><p>CSS</p><p>Javascript</p><p>API</p></div>
+                <p>Cypto currency paper trading app with real time data created using <span>Binance API</span>. User can place limit buy and sell orders, user's account details will be stored in local storage. It is my First <span>Javascript</span> project</p>
+                <a href="https://prade.netlify.app/">Visit</a>
+            </div>
+            <div class="card">
+                <img src="/images/quizzical.png" alt="">
+                <h2>Prade</h2>
+                <div><p>HTML</p><p>CSS</p><p>Javascript</p><p>React JS</p><p>API</p></div>
+                <p>Quiz app created using <span>React JS</span> and <span>Open Trivia API</span>. This app is created as part of <span>Scrimba</span>solo project</p>
+                <a href="https://prade.netlify.app/">Visit</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- https://caffee-shop.netlify.app
+https://prade.netlify.app/
+https://quizicaltrivia.netlify.app/ -->
 </body>
 
 </html>
 
 <!-- 
+    
+    <svg class="icon">
+  <use xlink:href="#icons8-github"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#icons8-gmail-logo"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#icons8-linkedin"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#icons8-twitter"></use>
+</svg>
+
 
   <svg class="icon">
     <use xlink:href="#code-slash"></use>

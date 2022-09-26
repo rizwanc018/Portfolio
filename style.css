@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
 
 :root {
     --editor-bg-clr: hsl(251, 2%, 10%);
@@ -12,8 +12,12 @@
     --attr-clr: hsl(261, 55%, 57%);
     --txt-xlr: hsl(89, 75%, 61%);
     --inner-html-clr: hsl(0, 0%, 100%);
+    --brwsr-vp-bg-clr: hsl(156, 58%, 80%);
+    --plnt-2-pr-clr: hsl(6, 50%, 52%);
+    --plnt-2-sc-clr: hsl(6, 50%, 48%);
+    --fnt-pr-clr: hsl(156, 100%, 4%);
 
-    
+
 
     /* --wp--preset--color--light-green-cyan: hsl(156, 58%, 67%); */
 }
@@ -25,7 +29,13 @@
 }
 
 body {
+    /* font-family: 'Karla', sans-serif; */
+
+    /* font-family: 'Outfit', sans-serif; */
+    /* font-family:  sans-serif; */
+
     font-family: 'Poppins', sans-serif;
+    background-color: hsl(156, 100%, 96%)
 }
 
 .hero {
@@ -117,6 +127,7 @@ body {
     gap: .4rem;
 }
 
+
 .tag,
 .attribute,
 .text,
@@ -125,9 +136,9 @@ body {
     border-radius: 100vh;
 }
 
-.tag:hover ,
-.attribute:hover ,
-.text:hover ,
+.tag:hover,
+.attribute:hover,
+.text:hover,
 .inner-html:hover {
     transform: scale(1.5);
 }
@@ -227,7 +238,7 @@ body {
     border-left: 2px solid var(--brws-tl-bar-brdr-clr);
     border-right: 2px solid var(--brws-tl-bar-brdr-clr); */
     border: 2px solid var(--brws-tl-bar-brdr-clr);
-    
+
 }
 
 .tool-bar {
@@ -331,9 +342,8 @@ body {
     /* background-color: hsla(180, 38%, 65%, 1); */
     /* background: hsla(225, 94%, 7%, 1); */
     /* background: hsla(240, 52%, 67%, 1); */
-    background: hsl(156, 58%, 67%);
+    background: var(--brwsr-vp-bg-clr);
 }
-
 
 /* shooting star :   https://codesandbox.io/s/css-shooting-stars-animation-forked-udnp87 */
 /* planet :   https://codepen.io/Jackthomsonn/pen/vOvNgL?editors=1100 */
@@ -354,7 +364,7 @@ body {
     background: #fff;
     border-radius: 50%;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
-    animation: shine 1ms linear infinite;   
+    animation: shine 1ms linear infinite;
 }
 
 .star::before {
@@ -380,21 +390,24 @@ body {
     background: linear-gradient(transparent, #fff, transparent);
 
 }
+
 .star:nth-child(1) {
-    top: 3rem;
-    left: 4rem;
+    top: 10vh;
+    left: 7vw;
 }
 
 .star:nth-child(2) {
-    top: 13rem;
+    top: 37vh;
     left: 8rem;
     width: .8rem;
     height: .8rem;
+
 }
 
 .star:nth-child(2)::before {
     width: 3rem;
     height: 1px;
+    
 }
 
 .star:nth-child(2)::after {
@@ -403,8 +416,8 @@ body {
 }
 
 .star:nth-child(3) {
-    top: 10rem;
-    left: 18rem;
+    top: 33vh;
+    left: 20vw;
 }
 
 .star:nth-child(4) {
@@ -418,8 +431,9 @@ body {
 }
 
 .star:nth-child(6) {
-    top: 16rem;
-    left: 30rem;
+    top: 45vh;
+    left: 42vw;
+
 }
 
 .star:nth-child(7) {
@@ -428,20 +442,24 @@ body {
 }
 
 .star:nth-child(8) {
-    top: 22rem;
+    top: 80vh;
     left: 14rem;
+    /* border: 2px solid red; */
+
 }
 
 .star:nth-child(9) {
-    top: 23rem;
+    top: 70vh;
     left: 22rem;
+
 }
 
 .star:nth-child(10) {
-    top: 26rem;
-    left: 30rem;
+    top: 75vh;
+    left: 38vw;
     width: 1rem;
     height: 1rem;
+
 }
 
 .star:nth-child(10)::before {
@@ -469,16 +487,17 @@ body {
 
 
 .planet2 {
-    background: hsl(6, 50%, 52%);
+    background: var(--plnt-2-pr-clr);
     box-shadow: inset -30px -30px 0px hsl(6, 50%, 50%);
     width: 13rem;
     height: 13rem;
     border-radius: 100%;
-    /* z-index: 2; */
+    position: relative;
+    z-index: 2;
 
     margin-inline-start: 18rem;
     margin-block-start: 1rem;
-    perspective: 100px;
+    /* perspective: 100px; */
     animation-name: rotate;
     animation-duration: 15s;
     animation-iteration-count: infinite;
@@ -488,7 +507,7 @@ body {
 
 .planet2:before {
     content: '';
-    background: hsl(6, 50%, 47%);
+    background-color: var(--plnt-2-sc-clr);
     border-radius: 100%;
     width: 1.2rem;
     height: 1.2rem;
@@ -499,7 +518,7 @@ body {
 
 .planet2:after {
     content: '';
-    background: hsl(6, 50%, 48%);
+    background-color: var(--plnt-2-sc-clr);
     border-radius: 100%;
     width: 3rem;
     height: 3rem;
@@ -514,7 +533,7 @@ body {
     height: 5rem;
     border-radius: 100%;
     /* z-index: 2; */
-    margin: 7rem 3rem 0 18rem;
+    margin: 33vh 3rem 8vh 18rem;
     animation-name: rotate;
     animation-duration: 6s;
     animation-iteration-count: infinite;
@@ -581,6 +600,9 @@ body {
     border-radius: 50%;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
     animation: animate 6s linear infinite;
+    z-index: 3;
+    /* border: 2px solid red; */
+
     /* transform: translateX(-100px)  */
 }
 
@@ -590,8 +612,11 @@ body {
     top: 50%;
     transform: translateY(-50%);
     width: 18rem;
-    height: 1px;
+    height: .07rem;
     background: linear-gradient(90deg, #fff, transparent);
+    /* z-index: 3; */
+
+    /* border: 2px solid red; */
 }
 
 @keyframes animate {
@@ -626,6 +651,7 @@ body {
     left: initial;
     animation-delay: 2s;
     animation-duration: 6s;
+    z-index: 1;
 }
 
 .shooting-star:nth-child(3) {
@@ -635,3 +661,138 @@ body {
     animation-delay: 0.8s;
     animation-duration: 4s;
 }
+
+.content-container {
+    /* background-color: hsl(156, 100%, 96%); */
+    color: var(--fnt-pr-clr);
+    padding: 25vh 6vw;
+    isolation: isolate;
+}
+
+.container-title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    /* border: 2px solid red; */
+}
+
+/* .about > h1 {
+    margin: 0;
+} */
+
+.container-title::after {
+    content: ' ';
+    height: 25%;
+    display: block;
+    position: absolute;
+    /* bottom: 50%; */
+    top: 50%;
+    /* background-color: hsl(156, 100%, 24%); */
+    background-color: var(--plnt-2-sc-clr);
+    width: 100%;
+    z-index: -2;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+}
+
+.about,
+.projects {
+    background-color: hsl(156, 100%, 96%);
+
+    /* box-shadow: -2px 1px 5px 1px rgba(0,0,0,1); */
+
+    /* border: 2px solid red; */
+
+}
+
+.fd {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.social-icons-container,
+.skill-icons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .75rem;
+}
+
+
+.social-icons-container a {
+    text-decoration: none;
+}
+
+
+.social-icon,
+.skill-icon {
+    width: 2rem;
+    /* aspect-ratio: 1; */
+    fill: var(--brwsr-vp-bg-clr);
+}
+
+.social-icon {
+    aspect-ratio: 1;
+}
+
+.skills-container {
+    /* border: 2px solid red; */
+    background-color: #fff;
+    /* box-shadow: 0px 1px 5px 0px rgba(0,0,0,.2); */
+}
+
+.skill-icons-container>div {
+    text-align: center;
+    /* border: 2px solid blue; */
+}
+
+.skill-icons-container>div>p {
+    margin-top: -3rem;
+    color: var(--tlbr-icon-clr);
+    /* border: 2px solid green; */
+}
+
+
+.skills-title {
+    margin-bottom: -2.75rem;
+}
+
+.skill-icon {
+    width: 4rem;
+    /* height: 4rem; */
+}
+
+.css-icon {
+    width: 5rem;
+    /* height: 4.5rem; */
+}
+
+
+
+.cards-container {
+    display: flex;
+    gap: 1rem
+}
+
+.card {
+    background-color: #fff;
+}
+
+.card > img {
+    width: 100%;
+    /* height: 12rem; */
+    /* aspect-ratio: 1; */
+}
+/* .projects {
+    position: relative;
+} */
+
+
+/* .projects > div {
+    background-color: #fff;
+    width: 100%;
+    isolation: isolate ;
+} */
