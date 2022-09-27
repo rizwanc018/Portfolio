@@ -351,8 +351,17 @@ a {
     /* background: hsla(225, 94%, 7%, 1); */
     /* background: hsla(240, 52%, 67%, 1); */
     background: var(--brwsr-vp-bg-clr);
+    isolation: isolate;
 }
 
+.star-container {
+    z-index: -1;
+}
+
+.about{
+    position: absolute;
+    top: 0;
+}
 /* shooting star :   https://codesandbox.io/s/css-shooting-stars-animation-forked-udnp87 */
 /* planet :   https://codepen.io/Jackthomsonn/pen/vOvNgL?editors=1100 */
 /* https://www.geeksforgeeks.org/how-to-create-shooting-star-animation-effect-using-css/ */
@@ -707,7 +716,7 @@ a {
     /* transform: translateX(-50%); */
 }
 
-.about,
+/* .about, */
 .projects {
     background-color: hsl(156, 100%, 96%);
 
