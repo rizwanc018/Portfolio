@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap&family=Just+Me+Again+Down+Here&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128&display=swap');
 
 :root {
     --editor-bg-clr: hsl(251, 2%, 10%);
@@ -15,11 +16,9 @@
     --brwsr-vp-bg-clr: hsl(156, 58%, 80%);
     --plnt-2-pr-clr: hsl(6, 74%, 44%);
     --plnt-2-sc-clr: hsl(6, 74%, 38%);
-    --fnt-pr-clr: hsl(156, 100%, 4%);
-
-
-
-    /* --wp--preset--color--light-green-cyan: hsl(156, 58%, 67%); */
+    --fnt-pr-clr: hsl(156, 100%, 8%);
+    --cntnt-bg-clr: hsl(156, 100%, 95%);
+    --social-icn-clr: hsl(156, 100%, 80%)
 }
 
 * {
@@ -28,22 +27,26 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
-    /* font-family: 'Karla', sans-serif; */
-
-    /* font-family: 'Outfit', sans-serif; */
-    /* font-family:  sans-serif; */
-
     font-family: 'Poppins', sans-serif;
     background-color: hsl(156, 100%, 96%);
     color: var(--fnt-pr-clr);
-
 }
 
 
 a {
     text-decoration: none;
 }
+
+ul {
+    list-style-type: none;
+}
+
 
 
 .hero {
@@ -65,7 +68,6 @@ a {
 }
 
 .code {
-    /* border: 2px solid red; */
     overflow: hidden;
 }
 
@@ -100,7 +102,6 @@ a {
     height: 93%;
     flex: 1;
     display: flex;
-    /* border: 2px solid blue; */
 
 }
 
@@ -109,7 +110,6 @@ a {
     width: 2.25rem;
     background-color: var(--editor-bar-clr);
     padding-block-end: 1.25rem;
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -126,6 +126,7 @@ a {
 .side-bar-icon {
     width: 1.3rem;
     aspect-ratio: 1;
+    fill: hsla(0, 0%, 50%, .3);
 }
 
 .line {
@@ -242,9 +243,6 @@ a {
     flex-direction: column;
     height: initial;
     border-radius: 5px;
-    /* border-bottom: 2px solid var(--brws-tl-bar-brdr-clr);
-    border-left: 2px solid var(--brws-tl-bar-brdr-clr);
-    border-right: 2px solid var(--brws-tl-bar-brdr-clr); */
     border: 2px solid var(--brws-tl-bar-brdr-clr);
 
 }
@@ -301,8 +299,6 @@ a {
     border: 1px solid var(--brws-tl-bar-brdr-clr);
     display: flex;
     align-items: center;
-    /* border: 2px solid red; */
-
 
 }
 
@@ -312,7 +308,6 @@ a {
     height: .45rem;
     border-radius: 100vh;
     margin-inline-start: .3rem;
-    /* border: 2px solid red; */
 }
 
 .option {
@@ -346,31 +341,52 @@ a {
     background: #222;
     overflow: hidden;
     position: relative;
-    /* border: 2px solid red; */
-    /* background-color: hsla(180, 38%, 65%, 1); */
-    /* background: hsla(225, 94%, 7%, 1); */
-    /* background: hsla(240, 52%, 67%, 1); */
     background: var(--brwsr-vp-bg-clr);
     isolation: isolate;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: .75rem;
+    background-color: #fff;
+    z-index: 999;
+    position: absolute;
+    top: .5rem;
+    left: 0;
+    right: 0;
+
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+.nav a {
+    color: var(--fnt-pr-clr);
+    cursor: pointer;
+    padding-inline: .25rem;
+    transition: background-color .5s;
+    font-weight: 200 !important;
+}
+
+.nav a:hover {
+    background-color: var(--fnt-pr-clr);
+    color: #fff;
 }
 
 .star-container {
     z-index: -1;
 }
 
-.about{
+.about {
     position: absolute;
-    top: 0;
+    top: 2rem;
 }
-/* shooting star :   https://codesandbox.io/s/css-shooting-stars-animation-forked-udnp87 */
-/* planet :   https://codepen.io/Jackthomsonn/pen/vOvNgL?editors=1100 */
-/* https://www.geeksforgeeks.org/how-to-create-shooting-star-animation-effect-using-css/ */
-
-/* .star-container {
-    width: 80%;
-    height: 80%;
-    background-size: 100% 100%;
-} */
 
 .star {
     position: absolute;
@@ -401,7 +417,6 @@ a {
     position: absolute;
     top: -150%;
     left: 45%;
-    /* transform: translate(-50%); */
     width: 1px;
     height: 2rem;
     background: linear-gradient(transparent, #fff, transparent);
@@ -443,7 +458,7 @@ a {
 }
 
 .star:nth-child(5) {
-    top: 1rem;
+    top: 2rem;
     left: 38rem;
 }
 
@@ -461,8 +476,6 @@ a {
 .star:nth-child(8) {
     top: 80vh;
     left: 14rem;
-    /* border: 2px solid red; */
-
 }
 
 .star:nth-child(9) {
@@ -497,7 +510,6 @@ a {
     }
 
     50% {
-        /* transform: scale(.8); */
         opacity: .4;
     }
 }
@@ -505,18 +517,14 @@ a {
 
 .planet2 {
     background: var(--plnt-2-pr-clr);
-    /* box-shadow: inset -30px -30px 0px hsl(6, 50%, 50%); */
     box-shadow: inset -30px -30px 0px hsl(6, 74%, 42%);
-
     width: 13rem;
     height: 13rem;
     border-radius: 100%;
     position: relative;
     z-index: 2;
-
     margin-inline-start: 18rem;
     margin-block-start: 1rem;
-    /* perspective: 100px; */
     animation-name: rotate;
     animation-duration: 15s;
     animation-iteration-count: infinite;
@@ -532,7 +540,6 @@ a {
     height: 1.2rem;
     display: block;
     margin: 5px 100px 55px;
-    /* border: 2px solid red; */
 }
 
 .planet2:after {
@@ -567,7 +574,6 @@ a {
     height: .4rem;
     display: block;
     margin: 25px 35px;
-    /* border: 2px solid red; */
 }
 
 .planet1::after {
@@ -596,19 +602,6 @@ a {
 
 }
 
-/* .planet-container{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 92vh; */
-/* background: url(./bg0.jpg);
-    background-position-x: center;
-    background-size: cover; */
-/* animation: animateBg 50s linear infinite; */
-/* border: 2px solid red; */
-/* } */
-
 .shooting-star {
     position: absolute;
     top: 50%;
@@ -620,9 +613,6 @@ a {
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
     animation: animate 6s linear infinite;
     z-index: 3;
-    /* border: 2px solid red; */
-
-    /* transform: translateX(-100px)  */
 }
 
 .shooting-star::before {
@@ -633,9 +623,6 @@ a {
     width: 18rem;
     height: .07rem;
     background: linear-gradient(90deg, #fff, transparent);
-    /* z-index: 3; */
-
-    /* border: 2px solid red; */
 }
 
 @keyframes animate {
@@ -682,10 +669,7 @@ a {
 }
 
 .content-container {
-    /* background-color: hsl(156, 100%, 96%); */
-    /* color: var(--fnt-pr-clr); ---------------------------------------------------*/
-    padding: 25vh 6vw;
-    isolation: isolate;
+    padding: 20vh 6vw;
 }
 
 .container-title {
@@ -694,40 +678,26 @@ a {
     text-transform: uppercase;
     position: relative;
     z-index: 2;
-    /* border: 2px solid red; */
 }
-
-/* .about > h1 {
-    margin: 0;
-} */
 
 .container-title::after {
     content: ' ';
     height: 25%;
     display: block;
     position: absolute;
-    /* bottom: 50%; */
     top: 50%;
-    /* background-color: hsl(156, 100%, 24%); */
-    background-color: var(--plnt-2-sc-clr);
+    background-color: var(--plnt-2-pr-clr);
     width: 100%;
     z-index: -2;
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
+
 }
 
-/* .about, */
 .projects {
-    background-color: hsl(156, 100%, 96%);
-
-    /* box-shadow: -2px 1px 5px 1px rgba(0,0,0,1); */
-
-    /* border: 2px solid red; */
-
+    background-color: var(--cntnt-bg-clr);
 }
 
 .fd {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 800;
     text-transform: uppercase;
 }
@@ -737,35 +707,25 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: .75rem;
+    gap: 1rem;
 }
 
-.social-icon,
 .skill-icon {
     width: 2rem;
-    /* aspect-ratio: 1; */
-    fill: var(--brwsr-vp-bg-clr);
-}
-
-.social-icon {
-    aspect-ratio: 1;
+    fill: var(--plnt-2-pr-clr);
 }
 
 .skills-container {
-    /* border: 2px solid red; */
     background-color: #fff;
-    /* box-shadow: 0px 1px 5px 0px rgba(0,0,0,.2); */
 }
 
 .skill-icons-container>div {
     text-align: center;
-    /* border: 2px solid blue; */
 }
 
 .skill-icons-container>div>p {
     margin-top: -3rem;
     color: var(--tlbr-icon-clr);
-    /* border: 2px solid green; */
 }
 
 
@@ -775,12 +735,10 @@ a {
 
 .skill-icon {
     width: 4rem;
-    /* height: 4rem; */
 }
 
 .css-icon {
     width: 5rem;
-    /* height: 4.5rem; */
 }
 
 .cards-container {
@@ -793,48 +751,39 @@ a {
     border-radius: 1rem;
     overflow: hidden;
     flex: 1;
-    /* border: 3px solid var(--brwsr-vp-bg-clr); */
-    border: 3px solid var(--plnt-2-pr-clr);
+    border: 1px solid var(--plnt-2-pr-clr);
     padding-bottom: .5rem;
-    /* text-align: center; */
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
-    /*  justify-content: space-between; */
 
 }
 
 .card>*+* {
-    /* border: 2px solid red; */
     padding-inline: 1rem;
 }
 
 .card img {
     width: 100%;
     height: 10rem;
-    /* object-fit: fit; */
-    /* height: 12rem; */
-    /* aspect-ratio: 1; */
 }
 
 .card .languages {
     display: flex;
     align-items: center;
     gap: .7rem;
-    /* flex-wrap: wrap; */
     color: var(--tlbr-icon-clr);
-    /* margin: 0; */
-    /* padding: 0; */
-    /* height: 1rem; */
-    /* margin-block: .5rem; */
-    /* border: 2px solid red; */
+    padding-block: .5rem;
 }
 
-.card > p {
-    /* border: 2px solid red; */
+.card>p {
     text-align: justify;
     margin-bottom: 2rem;
 
+}
+
+.card .bold {
+    font-weight: 700;
 }
 
 .card .button {
@@ -850,7 +799,7 @@ a {
 
 .card .visit {
     border-radius: 1rem;
-    border: 3px solid var(--brwsr-vp-bg-clr);
+    border: 2px solid var(--brwsr-vp-bg-clr);
     background-color: var(--plnt-2-pr-clr);
     color: #fff;
     font-size: 1rem;
@@ -858,9 +807,9 @@ a {
     padding: .1rem 1rem;
 }
 
-.card4  {
+.card4 {
     position: relative;
-    color: hsla(0, 0%, 0%,.1) !important;
+    color: hsla(0, 0%, 0%, .1) !important;
 }
 
 .mask {
@@ -872,16 +821,44 @@ a {
     font-size: 1.25rem;
     font-weight: 700;
     text-align: center;
-    /* border: 2px solid red; */ 
     background-color: hsla(0, 0%, 0%, .9);
     padding: 30rem;
-    /* box-shadow: 1px 1px 1px 1000px hsla(0, 0% , 0% , .9); */
 }
 
 .footer {
     background-color: var(--plnt-2-pr-clr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--cntnt-bg-clr);
+    position: relative;
 }
 
-.footer-title::after {
-    background-color: var(--brwsr-vp-bg-clr);
+.footer h2 {
+    font-weight: 300;
+}
+
+.social-icon {
+    width: 3rem;
+    fill: var(--social-icn-clr);
+    aspect-ratio: 1;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 1rem;
+    font-size: .8rem;
+    font-weight: 200;
+}
+
+.name {
+    font-family: 'Just Me Again Down Here', cursive;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    padding-inline-start: .2rem;
+}
+
+.bar {
+    font-family: 'Libre Barcode 128', cursive;
 }
