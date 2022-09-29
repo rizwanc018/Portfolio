@@ -56,6 +56,7 @@ ul {
     align-items: stretch;
 }
 
+
 .editor,
 .browser {
     width: 50%;
@@ -304,7 +305,7 @@ ul {
 
 .find-url {
     background-color: var(--brws-tl-bar-brdr-clr);
-    width: 15rem;
+    width: 70%;
     height: .45rem;
     border-radius: 100vh;
     margin-inline-start: .3rem;
@@ -348,15 +349,23 @@ ul {
 .nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding-inline: .75rem;
+    margin-block-start: 1rem;
     background-color: #fff;
     z-index: 999;
     position: absolute;
     top: .5rem;
     left: 0;
     right: 0;
+}
 
+.name {
+    line-height: 1.75rem;
+    /* padding-block-start: .3rem; */
+}
+
+.name , .nav {
+    align-items: flex-end;
 }
 
 .nav ul {
@@ -706,6 +715,7 @@ ul {
 .skill-icons-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
 }
@@ -861,4 +871,26 @@ ul {
 
 .bar {
     font-family: 'Libre Barcode 128', cursive;
+}
+
+@media screen and (max-width: 420px) {
+    .hero {
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .editor{
+        display: none;
+    }
+
+    .editor,
+    .browser {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .cards-container{
+        flex-direction: column;
+    }
 }
