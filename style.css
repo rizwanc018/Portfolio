@@ -97,6 +97,8 @@ ul {
 .close-icon {
     width: .8rem;
     aspect-ratio: 1;
+    fill: hsla(0, 0%, 50%, .5);
+
 }
 
 .sideBar-code {
@@ -357,6 +359,7 @@ ul {
     top: .5rem;
     left: 0;
     right: 0;
+    position: relative;
 }
 
 .name {
@@ -364,14 +367,15 @@ ul {
     /* padding-block-start: .3rem; */
 }
 
-.name , .nav {
+.name,
+.nav {
     align-items: flex-end;
 }
 
 .nav ul {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1vw;
 }
 
 
@@ -383,9 +387,57 @@ ul {
     font-weight: 200 !important;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a:active {
     background-color: var(--fnt-pr-clr);
     color: #fff;
+}
+
+.burger {
+    display: none;
+}
+
+.nav-toggle,
+.nav-toggle span {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1rem;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    background: var(--fnt-pr-clr);
+    display: none;
+    width: 1.5rem;
+    height: 2px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.burger-close-icon {
+    fill: var(--fnt-pr-clr);
+    display: none;
+    /* display: block; */
+    width: 1.5rem;
+    aspect-ratio: 1;
+    border-radius: 2px;
+    position: relative;
+    /* top: 50%; */
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
 }
 
 .star-container {
@@ -856,6 +908,7 @@ ul {
 }
 
 .copyright {
+    text-align: justify;
     position: absolute;
     bottom: 1rem;
     font-size: .8rem;
@@ -873,14 +926,14 @@ ul {
     font-family: 'Libre Barcode 128', cursive;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 38rem) {
     .hero {
         flex-direction: column;
         width: 100vw;
         height: 100vh;
     }
 
-    .editor{
+    .editor {
         display: none;
     }
 
@@ -890,7 +943,57 @@ ul {
         height: 100vh;
     }
 
-    .cards-container{
+    .cards-container {
         flex-direction: column;
     }
+    .nav-items ul {
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 1rem;
+        position: absolute;
+        right: 0%;
+        text-align: left;
+        gap: .5rem;
+        width: 100%;
+        background-color: #fff;
+
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 400ms ease;
+    }
+
+
+    .nav-toggle:checked ~ .nav-items ul {
+        transform: scale(1, 1);
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label .burger-close-icon{
+        display: block;
+
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label span{
+        display: none;
+    }
+
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        display: block;
+    }
+
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        content: '';
+        position: absolute;
+    }
+
+    .nav-toggle-label span::before {
+        bottom: 5px;
+    }
+
+    .nav-toggle-label span::after {
+        top: 5px;
+    }
+
 }
