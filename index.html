@@ -365,31 +365,17 @@
                     </label>
                     <div class="nav-items">
                         <ul>
+                            <li><a href="#about-me">About Me</a></li>
                             <li><a href="#skills">Skills</a></li>
                             <li><a href="#projects">Projects</a></li>
                             <li><a href="#contact">Contacts</a></li>
                         </ul>
-                        <!-- <label for="nav-toggle" class="nav-toggle-label">
-                            <span class="burger"></span>
-                            <svg class="icon burger-close-icon">
-                                <use xlink:href="/icons.svg#close"></use>
-                            </svg>
-                        </label> -->
-
                     </div>
                 </header>
 
-                <!-- <div class="nav">
-                    <div class="logo name">Rizwan</div>
-                    <ul>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contacts</a></li>
-                    </ul>
-                </div> -->
+
                 <section class="star-container">
                     <span class="star"></span>
-
                     <span class="star"></span>
                     <span class="star"></span>
                     <span class="star"></span>
@@ -399,7 +385,6 @@
                     <span class="star"></span>
                     <span class="star"></span>
                     <span class="star"></span>
-
                 </section>
 
                 <div class="planet-container">
@@ -413,13 +398,25 @@
                     <span class="shooting-star"></span>
                 </section>
 
-                <div class="about content-container" id="about">
+                <div class="intro content-container">
                     <p>Hi, my name is <span class="name">Rizwan,</span></p>
                     <h2>I am a <span class="fd">Front-end Developer,</span></h2>
                     <p> who loves to code CSS, I can help you bring your Dream Designs to Real life.</p>
                 </div>
         </div>
     </div>
+    <!-- </div> -->
+
+
+    <div class="about-me content-container" id="about-me">
+        <h1 class="about-me-title container-title">About Me</h1>
+        <p>Hi there! I'm Rizwan, who loves building and designing things with code.</p>
+        
+        <p>I was interested in coding since I knew about it, But I didnt give serious attention until search for crypto currency <q>paper trading app</q>  forced me to create one.</p> 
+        
+        <p>Previously I  had little exposure to CSS and Javascript. So I decided to create app uisng CSS and Javascript, and own paper trading app <a href="https://prade.netlify.app/"><q>Prade</q></a> using <q>Javascript</q> and <q>CSS</q>. I have never felt so much happines before.</p>
+        
+        <p>Since then, I've been learning and honing my skill. I'm seeking a full-time role where I can help a company achieve their goals.</p>
     </div>
 
     <div class="skills-container content-container" id="skills">
@@ -471,8 +468,31 @@
     <div class="projects content-container" id="projects">
         <h1 class="container-title">Projects</h1>
         <div class="cards-container">
-            <div class="card card1">
 
+            <div class="card card1">
+                <img src="/images/prade.png" alt="">
+                <h2>Paper Trade App</h2>
+                <div class="languages">
+                    <p>JS</p>
+                    <p>API</p>
+                    <p>CSS</p>
+                    <p>HTML</p>
+                </div>
+                <p>Cypto currency <span class="bold">paper trading</span> app, created using <span class="bold">Binance
+                        API, Chart.js & Javascript</span>. User
+                    can place limit orders. <span class="bold">Local storage</span> is used to store user asset details<span
+                        class="bold">first</span> <span class="bold">Javascript</span> project.</p>
+                <div class="button">
+                    <a href="https://github.com/rizwanc018/Prade" target="_blank">
+                        <svg class="icon social-icon">
+                            <use xlink:href="/icons.svg#icons8-github"></use>
+                        </svg>
+                    </a>
+                    <a class="visit" href="https://prade.netlify.app/" target="_blank">Visit</a>
+                </div>
+            </div>
+
+            <div class="card card2">
                 <img src="/images/coffee-shop.png" alt="">
                 <h2>Commercial Website</h2>
                 <div class="languages">
@@ -483,7 +503,7 @@
                     project, Created after learning
                     <span class="bold">HTML</span> and <span class="bold">CSS</span>. Later added some JS animation to
                     it. Design is copied
-                    from internet
+                    from internet.
                 </p>
                 <div class="button">
                     <a href="https://github.com/rizwanc018/CoffeShop" target="_blank">
@@ -493,31 +513,8 @@
                     </a>
                     <a class="visit" href="https://caffee-shop.netlify.app/" target="_blank">Visit</a>
                 </div>
-
             </div>
-            <div class="card card2">
-                <img src="/images/prade.png" alt="">
-                <h2>Paper Trade App</h2>
-                <div class="languages">
-                    <p>JS</p>
-                    <p>API</p>
-                    <p>CSS</p>
-                    <p>HTML</p>
-                </div>
-                <p>Cypto currency <span class="bold">paper trading</span> app, created using <span class="bold">Binance
-                        API</span>. User
-                    can place limit orders, user's account details will be stored in local storage. this is my <span
-                        class="bold">first</span> <span class="bold">Javascript</span> project</p>
-                <div class="button">
-                    <a href="https://github.com/rizwanc018/Prade" target="_blank">
-                        <svg class="icon social-icon">
-                            <use xlink:href="/icons.svg#icons8-github"></use>
-                        </svg>
-                    </a>
-                    <a class="visit" href="https://prade.netlify.app/" target="_blank">Visit</a>
-                </div>
 
-            </div>
             <div class="card card3">
                 <img src="/images/quizzical.png" alt="">
                 <h2>Quiz App</h2>
@@ -530,7 +527,8 @@
                 </div>
                 <p>Quiz app created using <span class="bold">ReactJS</span> and <span class="bold">Open Trivia
                         API</span>. This app is
-                    created as part of <span class="bold">Scrimba</span> solo project</p>
+                    created as part of <span class="bold">Scrimba</span> solo project. App will show coorect answers and score after quiz.</p>
+                    
                 <div class="button">
                     <a href="https://github.com/rizwanc018/Quizzcal" target="_blank">
                         <svg class="icon social-icon">
@@ -540,6 +538,7 @@
                     <a class="visit" href="https://quizicaltrivia.netlify.app/" target="_blank">Visit</a>
                 </div>
             </div>
+
             <div class="card card4">
                 <img src="/images/sqr-space.png" alt="">
                 <h2>Clone</h2>

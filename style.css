@@ -352,7 +352,7 @@ ul {
     display: flex;
     justify-content: space-between;
     padding-inline: .75rem;
-    margin-block-start: 1rem;
+    margin-block-start: .75rem;
     background-color: #fff;
     z-index: 999;
     position: absolute;
@@ -360,11 +360,12 @@ ul {
     left: 0;
     right: 0;
     position: relative;
+    overflow: hidden;
+
 }
 
 .name {
     line-height: 1.75rem;
-    /* padding-block-start: .3rem; */
 }
 
 .name,
@@ -382,7 +383,7 @@ ul {
 .nav a {
     color: var(--fnt-pr-clr);
     cursor: pointer;
-    padding-inline: .25rem;
+    padding: .25rem;
     transition: background-color .5s;
     font-weight: 200 !important;
 }
@@ -426,7 +427,6 @@ ul {
 .burger-close-icon {
     fill: var(--fnt-pr-clr);
     display: none;
-    /* display: block; */
     width: 1.5rem;
     aspect-ratio: 1;
     border-radius: 2px;
@@ -444,7 +444,7 @@ ul {
     z-index: -1;
 }
 
-.about {
+.intro {
     position: absolute;
     top: 2rem;
 }
@@ -763,6 +763,14 @@ ul {
     text-transform: uppercase;
 }
 
+.about-me > * + * {
+    padding-top: .5rem;
+}
+
+.about-me q {
+    font-weight: 700;
+}
+
 .social-icons-container,
 .skill-icons-container {
     display: flex;
@@ -805,6 +813,7 @@ ul {
 
 .cards-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem
 }
 
@@ -812,6 +821,7 @@ ul {
     background-color: #fff;
     border-radius: 1rem;
     overflow: hidden;
+    min-width: 15rem;
     flex: 1;
     border: 1px solid var(--plnt-2-pr-clr);
     padding-bottom: .5rem;
@@ -874,6 +884,10 @@ ul {
     color: hsla(0, 0%, 0%, .1) !important;
 }
 
+.card4 *:not(:last-child){
+    filter: blur(10px);
+}
+
 .mask {
     position: absolute;
     top: 50%;
@@ -926,26 +940,7 @@ ul {
     font-family: 'Libre Barcode 128', cursive;
 }
 
-@media screen and (max-width: 38rem) {
-    .hero {
-        flex-direction: column;
-        width: 100vw;
-        height: 100vh;
-    }
-
-    .editor {
-        display: none;
-    }
-
-    .editor,
-    .browser {
-        width: 100%;
-        height: 100vh;
-    }
-
-    .cards-container {
-        flex-direction: column;
-    }
+@media screen and (max-width: 55rem) {
     .nav-items ul {
         flex-direction: column;
         align-items: flex-end;
@@ -956,7 +951,6 @@ ul {
         gap: .5rem;
         width: 100%;
         background-color: #fff;
-
         transform: scale(1, 0);
         transform-origin: top;
         transition: transform 400ms ease;
@@ -994,6 +988,30 @@ ul {
 
     .nav-toggle-label span::after {
         top: 5px;
+    }
+
+    @media screen and (max-width: 38rem) {
+
+        .hero {
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+        }
+    
+        .editor {
+            display: none;
+        }
+    
+        .editor,
+        .browser {
+            width: 100%;
+            height: 100vh;
+        }
+    
+        .cards-container {
+            flex-direction: column;
+        }
+
     }
 
 }
