@@ -767,8 +767,9 @@ ul {
     padding-top: .5rem;
 }
 
-.about-me q {
-    font-weight: 700;
+.about-me q,
+.card .bold {
+    font-weight: 500;
 }
 
 .social-icons-container,
@@ -854,10 +855,6 @@ ul {
 
 }
 
-.card .bold {
-    font-weight: 700;
-}
-
 .card .button {
     display: flex;
     justify-content: space-around;
@@ -938,7 +935,14 @@ ul {
 
 .bar {
     font-family: 'Libre Barcode 128', cursive;
+    font-size: 1.5rem;
 }
+
+p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
 
 @media screen and (max-width: 55rem) {
     .nav-items ul {
