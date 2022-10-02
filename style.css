@@ -139,6 +139,16 @@ ul {
     gap: .4rem;
 }
 
+/* .line {
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform 1s ease;
+}
+
+.editor:hover .line {
+    transform: scale(1, 1);
+
+} */
 
 .tag,
 .attribute,
@@ -730,7 +740,7 @@ ul {
 }
 
 .content-container {
-    padding: 20vh 6vw;
+    padding: 20vh 10vw;
 }
 
 .container-title {
@@ -766,6 +776,7 @@ ul {
 .about-me > * + * {
     padding-top: .5rem;
 }
+
 
 .about-me q,
 .card .bold {
@@ -815,7 +826,7 @@ ul {
 .cards-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem
+    gap: 1rem;
 }
 
 .card {
@@ -824,7 +835,7 @@ ul {
     overflow: hidden;
     min-width: 15rem;
     flex: 1;
-    border: 1px solid var(--plnt-2-pr-clr);
+    box-shadow: hsl(156, 58%, 80%) 0px 2px 4px 0px, hsla(156, 58%, 4%, .3) 0px 2px 16px 0px;
     padding-bottom: .5rem;
     display: flex;
     flex-direction: column;
@@ -867,13 +878,17 @@ ul {
 }
 
 .card .visit {
-    border-radius: 1rem;
-    border: 2px solid var(--brwsr-vp-bg-clr);
-    background-color: var(--plnt-2-pr-clr);
-    color: #fff;
+    color: var(--fnt-pr-clr);
     font-size: 1rem;
-    font-weight: 600;
-    padding: .1rem 1rem;
+    font-weight: 500;
+    padding: .3rem 1.25rem;
+}
+
+.card .visit,
+.card-icon {
+    border-radius: 100vh;
+    box-shadow: hsl(156, 58%, 80%) 0px 1px 1px 0px, hsla(156, 58%, 4%, .3) 0px 1px 5px 0px;
+
 }
 
 .card4 {
@@ -908,11 +923,12 @@ ul {
     position: relative;
 }
 
-.footer h2 {
+.footer h1 {
     font-weight: 300;
 }
 
-.social-icon {
+.social-icon,
+.card-icon  {
     width: 3rem;
     fill: var(--social-icn-clr);
     aspect-ratio: 1;
