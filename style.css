@@ -139,16 +139,25 @@ ul {
     gap: .4rem;
 }
 
-/* .line {
+.line>* {
     transform: scale(0, 1);
-    transform-origin: left;
-    transition: transform 1s ease;
 }
 
-.editor:hover .line {
-    transform: scale(1, 1);
 
-} */
+.show {
+    transform-origin: left;
+    transition: transform 1s linear;
+    animation-name: example;
+    animation-duration: 40ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes example {
+    to {
+        transform: scale(1, 1);
+    }
+}
+
 
 .tag,
 .attribute,
@@ -156,13 +165,6 @@ ul {
 .inner-html {
     height: var(--code-hgt);
     border-radius: 100vh;
-}
-
-.tag:hover,
-.attribute:hover,
-.text:hover,
-.inner-html:hover {
-    transform: scale(1.5);
 }
 
 .tag {
@@ -596,11 +598,7 @@ ul {
     z-index: 2;
     margin-inline-start: 18rem;
     margin-block-start: 1rem;
-    animation-name: rotate;
     animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-
 }
 
 .planet2:before {
@@ -631,10 +629,7 @@ ul {
     border-radius: 100%;
     /* z-index: 2; */
     margin: 33vh 3rem 8vh 18rem;
-    animation-name: rotate;
     animation-duration: 6s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
 }
 
 .planet1:before {
@@ -657,7 +652,14 @@ ul {
     margin: -10px 20px;
 }
 
-@keyframes rotate {
+.planet1, .planet2 {
+    animation-name: orbit;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: -3s;
+}
+
+@keyframes orbit {
 
     0% {
         transform: translateX(-500px);
@@ -773,7 +775,7 @@ ul {
     text-transform: uppercase;
 }
 
-.about-me > * + * {
+.about-me>*+* {
     padding-top: .5rem;
 }
 
@@ -896,7 +898,7 @@ ul {
     color: hsla(0, 0%, 0%, .1) !important;
 }
 
-.card4 *:not(:last-child){
+.card4 *:not(:last-child) {
     filter: blur(10px);
 }
 
@@ -928,7 +930,7 @@ ul {
 }
 
 .social-icon,
-.card-icon  {
+.card-icon {
     width: 3rem;
     fill: var(--social-icn-clr);
     aspect-ratio: 1;
@@ -977,16 +979,16 @@ p {
     }
 
 
-    .nav-toggle:checked ~ .nav-items ul {
+    .nav-toggle:checked~.nav-items ul {
         transform: scale(1, 1);
     }
 
-    .nav-toggle:checked ~ .nav-toggle-label .burger-close-icon{
+    .nav-toggle:checked~.nav-toggle-label .burger-close-icon {
         display: block;
 
     }
 
-    .nav-toggle:checked ~ .nav-toggle-label span{
+    .nav-toggle:checked~.nav-toggle-label span {
         display: none;
     }
 
@@ -1017,21 +1019,49 @@ p {
             width: 100vw;
             height: 100vh;
         }
-    
+
         .editor {
             display: none;
         }
-    
+
         .editor,
         .browser {
             width: 100%;
             height: 100vh;
         }
-    
+
         .cards-container {
             flex-direction: column;
         }
 
     }
 
+}
+
+/* .brwsr-vp {
+    display: none;
+}
+
+.nav {
+    display: none;
+}
+
+.star-container {
+    display: none;
+}
+
+.planet-container {
+    display: none;
+}
+
+.shootingStar-container {
+    display: none;
+}
+
+.intro {
+    display: none;
+} */
+
+.hide {
+    display: none;
 }
