@@ -627,7 +627,6 @@ ul {
     width: 5rem;
     height: 5rem;
     border-radius: 100%;
-    /* z-index: 2; */
     margin: 33vh 3rem 8vh 18rem;
     animation-duration: 6s;
 }
@@ -742,7 +741,7 @@ ul {
 }
 
 .content-container {
-    padding: 20vh 10vw;
+    padding: 14vh 10vw;
 }
 
 .container-title {
@@ -765,8 +764,8 @@ ul {
 
 }
 
-.projects {
-    background-color: var(--cntnt-bg-clr);
+.skills, .projects {
+    background-color: white;
 }
 
 .fd {
@@ -786,7 +785,8 @@ ul {
 }
 
 .social-icons-container,
-.skill-icons-container {
+.skill-icons-container,
+.certs-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -823,6 +823,19 @@ ul {
 
 .css-icon {
     width: 5rem;
+}
+
+.certs-container {
+    justify-content: space-around;
+}
+
+.certs-container img{
+    width: 40%;
+    /* height: 18rem; */
+    min-width: 16rem;
+    border-radius: 5px;
+
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .cards-container {
@@ -962,7 +975,7 @@ p {
 }
 
 
-@media screen and (max-width: 55rem) {
+@media screen and (max-width: 80rem) {
     .nav-items ul {
         flex-direction: column;
         align-items: flex-end;
@@ -1037,30 +1050,6 @@ p {
     }
 
 }
-
-/* .brwsr-vp {
-    display: none;
-}
-
-.nav {
-    display: none;
-}
-
-.star-container {
-    display: none;
-}
-
-.planet-container {
-    display: none;
-}
-
-.shootingStar-container {
-    display: none;
-}
-
-.intro {
-    display: none;
-} */
 
 .hide {
     display: none;
