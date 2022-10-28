@@ -831,7 +831,6 @@ ul {
 
 .certs-container img{
     width: 40%;
-    /* height: 18rem; */
     min-width: 16rem;
     border-radius: 5px;
 
@@ -846,7 +845,7 @@ ul {
 
 .card {
     background-color: #fff;
-    border-radius: 1rem;
+    border-radius: .5rem;
     overflow: hidden;
     min-width: 15rem;
     flex: 1;
@@ -865,6 +864,11 @@ ul {
 .card img {
     width: 100%;
     height: 10rem;
+}
+
+.card h2 {
+    /* border: 1px solid red; */
+    box-shadow: 0 0px 5px  hsl(240 100% 50% / .3); 
 }
 
 .card .languages {
