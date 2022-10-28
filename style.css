@@ -845,7 +845,7 @@ ul {
 
 .card {
     background-color: #fff;
-    border-radius: .5rem;
+    border-radius: .3rem;
     overflow: hidden;
     min-width: 15rem;
     flex: 1;
