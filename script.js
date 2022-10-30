@@ -58,5 +58,4 @@ async function loop(lines) {
     }
 }
 
-// console.log(lines.length);
 loop(lines);
